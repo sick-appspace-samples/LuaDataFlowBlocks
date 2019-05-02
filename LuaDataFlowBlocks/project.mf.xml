@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="LuaDataFlowBlocks">
+        <crown name="LuaDataFlowBlocks">
+            <desc>user script</desc>
+            <serves>
+                <event name="OnNewNumber">
+                    <include>data-flow</include>
+                    <desc>No description yet...</desc>
+                    <param name="num" type="int" desc="No description yet..."/>
+                </event>
+                <function name="multiply">
+                    <include>data-flow</include>
+                    <desc>No description yet...</desc>
+                    <param name="num1" type="int" desc="No description yet..."/>
+                    <param name="num2" type="int" desc="No description yet..."/>
+                    <return name="result" type="int" desc="No description yet..."/>
+                </function>
+                <function name="printResult">
+                    <include>data-flow</include>
+                    <desc>No description yet...</desc>
+                    <param name="num" type="int" desc="No description yet..."/>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="licensed">false</meta>
+        <meta key="priority">low</meta>
+        <meta key="tags">Flow</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="flows">
+            <file type="text/xml">LuaDataFlowBlocks.dflow</file>
+        </entry>
+        <entry path="scripts" default="LuaDataFlowBlocks.lua">
+            <file type="text/x-lua">LuaDataFlowBlocks.lua</file>
+        </entry>
+    </application>
+</manifest>

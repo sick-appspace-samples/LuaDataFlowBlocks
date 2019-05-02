@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<glue>
+    <info>
+        <usage>dflow</usage>
+    </info>
+    <blocks id="Main">
+        <block type="Provider" name="OnNewNumber" event="LuaDataFlowBlocks.OnNewNumber(num)" x="-219.95" y="-310.45" width="120.0" height="100.0" path="LuaDataFlowBlocks.OnNewNumber">
+            <parameters/>
+        </block>
+        <block type="Function" name="multiply" function="result=LuaDataFlowBlocks.multiply(num1,num2)" x="-130.95" y="-128.45" width="120.0" height="100.0" path="LuaDataFlowBlocks.multiply">
+            <parameters/>
+        </block>
+        <block type="Consumer" name="printResult" function="LuaDataFlowBlocks.printResult(num)" x="-130.95" y="71.55" width="120.0" height="100.0" path="LuaDataFlowBlocks.printResult">
+            <parameters/>
+        </block>
+        <block type="Provider" name="OnNewNumber35" event="LuaDataFlowBlocks.OnNewNumber(num)" x="-65.95" y="-309.45" width="120.0" height="100.0" path="LuaDataFlowBlocks.OnNewNumber">
+            <parameters/>
+        </block>
+    </blocks>
+    <connections>
+        <link from="OnNewNumber:num" to="multiply:num1"/>
+        <link from="multiply:result" to="printResult:num"/>
+        <link from="OnNewNumber35:num" to="multiply:num2"/>
+    </connections>
+</glue>
