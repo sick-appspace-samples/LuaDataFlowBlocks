@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest>
     <application name="LuaDataFlowBlocks">
         <crown name="LuaDataFlowBlocks">
@@ -7,34 +7,28 @@
                 <event name="OnNewNumber">
                     <include>data-flow</include>
                     <desc>No description yet...</desc>
-                    <param name="num" type="int" desc="No description yet..."/>
+                    <param desc="No description yet..." name="num" type="int"/>
                 </event>
                 <function name="multiply">
                     <include>data-flow</include>
                     <desc>No description yet...</desc>
-                    <param name="num1" type="int" desc="No description yet..."/>
-                    <param name="num2" type="int" desc="No description yet..."/>
-                    <return name="result" type="int" desc="No description yet..."/>
+                    <param desc="No description yet..." name="num1" type="int"/>
+                    <param desc="No description yet..." name="num2" type="int"/>
+                    <return desc="No description yet..." name="result" type="int"/>
                 </function>
                 <function name="printResult">
                     <include>data-flow</include>
                     <desc>No description yet...</desc>
-                    <param name="num" type="int" desc="No description yet..."/>
+                    <param desc="No description yet..." name="num" type="int"/>
                 </function>
             </serves>
         </crown>
         <meta key="author">AppSpace Sample</meta>
         <meta key="version">2.5.0</meta>
-        <meta key="licensed">false</meta>
         <meta key="priority">low</meta>
         <meta key="tags">Flow</meta>
         <meta key="read-protected">false</meta>
         <meta key="copy-protected">false</meta>
-        <entry path="flows">
-            <file type="text/xml">LuaDataFlowBlocks.dflow</file>
-        </entry>
-        <entry path="scripts" default="LuaDataFlowBlocks.lua">
-            <file type="text/x-lua">LuaDataFlowBlocks.lua</file>
-        </entry>
+        <entry default="LuaDataFlowBlocks.lua" path="scripts"/>
     </application>
 </manifest>

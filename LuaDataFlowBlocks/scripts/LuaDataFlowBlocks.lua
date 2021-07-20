@@ -4,7 +4,7 @@
   LuaDataFlowBlocks
 
   Summary:
-  Serving Lua functions and events as data flow blocks
+  Serving Lua functions and events as data flow blocks.
 
   Description:
   This sample shows how functions and events from scripts can be served as data flow
