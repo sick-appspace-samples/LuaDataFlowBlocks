@@ -50,21 +50,21 @@ local function handleOnStarted()
 end
 Script.register('Engine.OnStarted', handleOnStarted)
 
--- Served function which acts as a processor block, it is served in the manifest
--- with 'include data-flow' statement.
+---Served function which acts as a processor block, it is served in the manifest
+---with 'include data-flow' statement.
 local function multiply(num1, num2)
   return num1 * num2
 end
 Script.serveFunction('LuaDataFlowBlocks.multiply', multiply)
 
--- Served function which acts as a consumer block, it is served in the manifest
--- with 'include data-flow' statement.
+---Served function which acts as a consumer block, it is served in the manifest
+---with 'include data-flow' statement.
 local function printResult(numResult)
   print('New number result: ' .. numResult)
 end
 Script.serveFunction('LuaDataFlowBlocks.printResult', printResult)
 
--- Generating number on timer expiration and notifying 'Provider' event
+---Generating number on timer expiration and notifying 'Provider' event
 local function handleOnExpired()
   num = num + 1
   Script.notifyEvent('OnNewNumber', num)
